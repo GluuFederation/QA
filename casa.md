@@ -1007,7 +1007,7 @@ Use the same steps as in SAML section, however, integrate a social site or an ex
 
 ## 2FA settings plugin
 
-Detailed instructions are here: https://gluu.org/docs/casa/4.2/plugins/cert-authn/
+Detailed instructions are here: https://gluu.org/docs/casa/4.2/plugins/2fa-settings/
 
 Ensure you use the 4.2-snapshot or 4.2.Final jar, not an older version
 
