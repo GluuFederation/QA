@@ -38,7 +38,7 @@ An OIDC client named gluu-casa_* was registered and:
 
 The client has no expiration or expires at least in 10 years
 
-Directory `/opt/gluu/python/libs` has 6 .py scripts starting with "casa"
+Directory `/opt/gluu/python/libs` has 7 .py scripts starting with "casa"
 
 jetty user is able to copy/replace files in `/opt/gluu/python/libs`
 
@@ -90,7 +90,7 @@ In a browser hit /casa/health-check. An OK message is displayed
 
 ## Post-installation
 
-This is a side test. In a Gluu installation without casa, try adding it [post-install](https://www.gluu.org/docs/casa/4.2/administration/installation/#installation-via-linux-packages). Do the same checks of sections [installation](#installation) and [service survival](#service-survival) above. 
+This is a side test. In a Gluu installation without casa, try adding it [post-install](https://www.gluu.org/docs/casa/4.3/administration/installation/#installation-via-linux-packages). Do the same checks of sections [installation](#installation) and [service survival](#service-survival) above. 
 
 
 ## Auth flows with 2nd app
@@ -260,8 +260,6 @@ Login to Casa with admin user
 
 A hint is shown about using the admin dashboard to add authentication methods
 
-Wait a minute
-
 Go to `Administration Console` > `Enabled authentication methods`
 
 All enabled scripts must appear listed
@@ -274,20 +272,16 @@ Click on back to your credentials
 
 The left menu shows all credential types enabled under 2FA credentials
 
-Logout
-
 
 (III)
 
 Login to oxTrust and disable one of enabled scripts
 
-Wait 2 minutes
-
 In casa, Go to `Administration Console` > `Enabled authentication methods`
 
 The method disabled is not listed
 
-Re-enable the custom script and wait 2 minutes
+Re-enable the custom script
 
 the method enabled is listed again
 
@@ -597,7 +591,7 @@ Enrollment name is refreshed in the upper panel
 
 ### FIDO2
 
-The same conditions and steps of u2f apply here. U2F keys are compatible with FIDO2
+The same conditions and steps of u2f apply here (except krypton). U2F keys are compatible with FIDO2
 
 Ensure the fido2 service is running
 
@@ -752,6 +746,8 @@ The 2FA credentials menu on the left is absent
 
 A hint is shown to contact the administrator to be able to use 2fa
 
+Logout and re-login as administrator
+
 Go to `Administration Console` > `Enabled authentication methods`
 
 Check all methods and Cick on Save
@@ -791,7 +787,11 @@ Delete the property previously added to the custom script
 
 (VII)
 
-In the casa custom script add a custom property named "mobile_methods", sets its value to otp
+Note: this step can be done if Gluu was deployed in a public server, otherwise you will have to alter the user-agent string used by the browser to mimick a mobile phone. This can be done easily in Firefox for instance
+
+In the casa custom script set the value of custom property "mobile_methods" to otp
+
+Click on Update at the bottom
 
 Logout
 
@@ -805,7 +805,7 @@ In the smartphone visit Casa
 
 Enter the user name and password
 
-An OTP will be requested in the next page, not a credential of other kind
+An OTP will be requested in the next page
 
 Enter the passcode
 
@@ -814,6 +814,8 @@ You get access to casa
 Logout from the mobile browser
 
 (VIII)
+
+Note: this step can only be done under the circumstances noted in the previous step
 
 In the desktop browser, set the value of "mobile_methods", to twilio_sms
 
@@ -831,9 +833,9 @@ Logout from the mobile browser
 
 ## Custom branding plugin
 
-Install the plugin. Instructions here: https://gluu.org/docs/casa/4.2/plugins/custom-branding/
+Install the plugin. Instructions here: https://gluu.org/docs/casa/4.3/plugins/custom-branding/
 
-Ensure you use the 4.2-snapshot or 4.2.Final jar, not an older version
+Ensure you use the 4.3-snapshot or 4.3.Final jar, not an older version
 
 Wait 2 mins
 
@@ -879,9 +881,9 @@ Logout
 
 ## Consent Management plugin
 
-Install the plugin. Instructions here https://gluu.org/docs/casa/4.2/plugins/consent-management/
+Install the plugin. Instructions here https://gluu.org/docs/casa/4.3/plugins/consent-management/
 
-Ensure you use the 4.2-snapshot or 4.2.Final jar, not an older version
+Ensure you use the 4.3-snapshot or 4.3.Final jar, not an older version
 
 Wait 2 mins
 
@@ -894,7 +896,7 @@ Login to oxTrust with admin user
 
 Locate the oxTrust OIDC client
 
-Uncheck the Pre-Authorization field
+Uncheck the Pre-Authorization field and check Persist Client Authorizations
 
 Click on Update
 
@@ -962,9 +964,9 @@ The following 2 sections require the passport component (in the same VM of Casa)
 - Test passport_saml is working fine
 
 
-Detailed instructions are here: https://gluu.org/docs/casa/4.2/plugins/account-linking/
+Detailed instructions are here: https://gluu.org/docs/casa/4.3/plugins/account-linking/
 
-Ensure you use the 4.2-snapshot or 4.2.Final jar, not an older version
+Ensure you use the 4.3-snapshot or 4.3.Final jar, not an older version
 
 Scenarios to test:
 
@@ -1020,16 +1022,16 @@ Use the same steps as in SAML section, however, integrate a social site or an ex
 
 ## 2FA settings plugin
 
-Detailed instructions are here: https://gluu.org/docs/casa/4.2/plugins/cert-authn/
+Detailed instructions are here: https://gluu.org/docs/casa/4.3/plugins/cert-authn/
 
-Ensure you use the 4.2-snapshot or 4.2.Final jar, not an older version
+Ensure you use the 4.3-snapshot or 4.3.Final jar, not an older version
 
 
 ## Certificate authentication plugin
 
-Detailed instructions are here: https://gluu.org/docs/casa/4.2/plugins/cert-authn/
+Detailed instructions are here: https://gluu.org/docs/casa/4.3/plugins/cert-authn/
 
-Ensure you use the 4.2-snapshot or 4.2.Final jar, not an older version
+Ensure you use the 4.3-snapshot or 4.3.Final jar, not an older version
 
 
 ## U2F to Fido2 migration
@@ -1040,7 +1042,7 @@ Create 2-3 testing users
 
 enroll 1-2 u2f credentials each in addition to another credential (eg OTP)
 
-Mirate the u2f entries to fido 2. Steps here: https://gluu.org/docs/casa/4.2/administration/fido2-migration/
+Mirate the u2f entries to fido 2. Steps here: https://gluu.org/docs/casa/4.3/administration/fido2-migration/
 
 Check all entries were migrated:
 
@@ -1054,13 +1056,16 @@ Check the keys work for authenticating (2FA)
 
 ## APIs testing
 
-Use the dummy enrollment client. See https://gluu.org/docs/casa/4.2/developer/#apis-for-credential-enrollment,
+See:
 
-or, code a client.
+- https://gluu.org/docs/casa/#2fa-enrollment-apis
+- https://gluu.org/docs/casa/#configuration-via-apis
+
+For the former, there is a dummy javascript client (you can code your own). For the latter, casa's github repo has a `config-client` that includes a very modest amount of automated tests.
 
 ## Localization
 
-Follow steps at https://gluu.org/docs/casa/4.2/administration/localization/#adding-internationalization-labels to add
+Follow steps at https://gluu.org/docs/casa/4.3/administration/localization/#adding-internationalization-labels to add
 a couple of languages.
 
 ## Sample plugins
