@@ -4,7 +4,7 @@ Here is how to test Casa. Any findings should be reported with relevant logs att
 
 **Important notes:**
 
-In general a default LDAP-based installation is OK for testing however trying with Couchbase should be done as well. At least the following sections should be considered in this case:
+In general a default LDAP-based installation is OK for testing however trying with Couchbase or another backend should be done as well. At least the following sections should be considered in this case:
 
 - [Enrollment](#enrollment)
 - [2fa authentication](#2fa-authentication)
