@@ -99,7 +99,7 @@ This is a side test. In a Gluu installation without casa, try adding it [post-in
 
 Login to Casa
 
-In a new tab hit /oxtrust. No prompt for username is shown
+In a new tab hit /identity. No prompt for username is shown
 
 Logout from oxtrust, then from casa
 
@@ -110,7 +110,7 @@ Sucessful pages for logout are shown in both cases
 
 Login to Casa
 
-In a new tab hit /oxtrust. No prompt for username is shown
+In a new tab hit /identity. No prompt for username is shown
 
 Logout from casa, then from oxtrust
 
@@ -165,7 +165,7 @@ Enter a new different domain and click add
 
 The domain entered appears in the list
 
-Enter one of the already enter domains and click add
+Enter one of the already entered domains and click add
 
 Nothing happens
 
@@ -1035,6 +1035,8 @@ Ensure you use the 4.3-snapshot or 4.3.Final jar, not an older version
 
 
 ## U2F to Fido2 migration
+
+**Note**: Tests in this section are optional.
 
 This section requires inspecting database entries (ie. UI client recommended)
 
