@@ -45,26 +45,6 @@ jetty user is able to copy/replace files in `/opt/gluu/python/libs`
 Directory `/opt/gluu/jetty/oxauth/custom/libs` contains twilio and jsmpp jar files
 
 
-<!--
-## Uninstallation
-
-Run `casa_cleanup.py` found in `/install/community-edition-setup`
-
-Successful messages are shown
-
-Directory `/opt/gluu/jetty/casa` does not exist
-
-`systemctl status casa` shows the service does not exist
-
-Subtree `ou=casa, ou=configuration, o=gluu` was removed from database
-
-The 2 casa scripts (person authentication & client registration) were removed
-
-The gluu-casa client was removed
-
-The casa scripts in `/opt/gluu/python/libs` were removed
--->
-
 ## Service survival
 
 Run `systemctl stop casa`
@@ -92,7 +72,7 @@ In a browser hit /casa/health-check. An OK message is displayed
 
 This is a side test. In a Gluu installation without casa, try adding it [post-install](https://www.gluu.org/docs/casa/4.3/administration/installation/#installation-via-linux-packages). Do the same checks of sections [installation](#installation) and [service survival](#service-survival) above. 
 
-
+<!--
 ## Auth flows with 2nd app
 
 (I)
@@ -137,7 +117,7 @@ In a new tab hit /casa. The prompt for username is shown
 Logout from casa, then from oxtrust
 
 Sucessful pages for logout are shown in both cases
-
+-->
 
 
 ## Admin features
