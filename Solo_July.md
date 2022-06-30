@@ -1,7 +1,8 @@
-Gluu 4.2 QA Status
+Gluu Solo 4.4 QA Status
 
 |Test Case ID| Feature                                                                  | Test Case | Assigned | Status |
 |:-----------|:-------------------------------------------------------------------------|:----------|----------|--------|
+|Gluu 0.0|Installation of Solo Instance|case 1:- Organization creation<br> case 2:- Spin Gluu Server<br> case 3:- Invite member|||
 |Gluu1.0| Input fields validation  |case 1:- Check input validations for all fields|||
 |Gluu1.1|Login & Registration                                | case 1:- setup smtp details<br> case 2:- without captcha enabled <br>case 3:- with captcha<br>case 4:- registration confirmation mail<br>case 5:- user can edit/add his self information like password ,country etc<br>case 6:- self passport reset Functionality<br>case 7:- forgot password Functionality without captcha<br>case 8:- forgot password Functionality with captcha<br>case 9:- Add secret question and answer during registration|||
 |Gluu1.2|User Management |case 1:- add/update user from oxtrust<br>case 2:- add/update user to group from oxtust<br>case 3:- import user from excel|||
