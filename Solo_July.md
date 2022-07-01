@@ -3,8 +3,8 @@ Gluu Solo 4.4 QA Status
 |Test Case ID| Feature                                                                  | Test Case | Assigned | Status |
 |:-----------|:-------------------------------------------------------------------------|:----------|----------|--------|
 |Gluu 0.0|Installation of Solo Instance|case 1:- Organization creation<br> case 2:- Spin Gluu Server<br> case 3:- Invite member|Mohit / Mohib|Tested by Mohib: OK|
-|Gluu1.0| Input fields validation  |case 1:- Check input validations for all fields|||
-|Gluu1.1|User Management |case 1:- add/update user from oxtrust<br>case 2:- add/update user to group from oxtust<br>case 3:- import user from excel|||
+|Gluu1.0| Input fields validation  |case 1:- Check input validations for all fields|Mohit||
+|Gluu1.1|User Management |case 1:- add/update user from oxtrust<br>case 2:- add/update user to group from oxtust<br>case 3:- import user from excel|Mohit / Mohib| case 1 and case 2: tested by Mohib: OK|
 |Gluu1.2|Login & Registration                                | case 1:- setup smtp details<br> case 2:- without captcha enabled <br>case 3:- with captcha<br>case 4:- registration confirmation mail<br>case 5:- user can edit/add his self information like password ,country etc<br>case 6:- self passport reset Functionality<br>case 7:- forgot password Functionality without captcha<br>case 8:- forgot password Functionality with captcha<br>case 9:- Add secret question and answer during registration|||
 |Gluu1.3|Custom Script |case 1:- testing duo Script<br>case 2:- testing twilio<br>case 3:- testing otp<br>case 4:- testing passport social<br>case 5:- testing passport saml<br>case 6:- testing super gluu script<br>case 7:- testing u2f script<br>case 8:- SP-based two factor (only one SP configured with 2FA)|||
 |Gluu1.4|Attribute Management |case 1:- create/delete custom Attribute<br>case 2:- update/delete existing Attribute<br>case 3:- import/export Attribute|||
