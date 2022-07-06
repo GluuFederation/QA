@@ -13,7 +13,7 @@ Gluu Solo 4.4 QA Status
 |Gluu1.7|Cache Refresh|case 1:- Add mulitple Source backend server<br>case 2:- mapping with different Attribute<br>case 3:- once cache refresh run check the user from user section<br>case 4:- test multi user config script (https://github.com/GluuFederation/oxAuth/tree/master/Server/integrations/basic.multi_auth_conf)|Mohit|case 1 tested:ok, case 2 tested:ok, case 3 tested: ok, case 4 tested: ok|
 |Gluu1.8|Passport| case 1:- Add provider like github ,google,  fb.<br>case 2:- Testing user login via passport service|Mohit|case 1: tested: ok case 2 testd: OK|
 |Gluu1.9|Casa|case 1:- enable casa<br>case 2:- enroll devices to check user registration.|Mohit||
-|Gluu1.10|Services|case 1:- start/stop/restart all the services and container|||
+|Gluu1.10|Services|case 1:- start/stop/restart all the services and container|Mohit|Case 1: OK|
 |Gluu1.11|Upgrade|case 1:- Test upgrade from previous minor version<br>case 2:- Test upgrade from previous major version|||
 |Gluu1.12|SCIM|case 1:- Test SCIM with test mode and with SCIM client<br>case 2:- Test SCIM after jks keys rollover|Mohit|case 1 tested: ok|
 |Gluu1.13|Radius|case 1:- Check Radius client and various configurations|||
